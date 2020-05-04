@@ -1,6 +1,7 @@
 {
-  "orgName": "Transaction Security Demo",
+  "orgName": "Transaction Security Workshop",
   "edition": "Developer",
+  "adminEmail": "workshops@mailinator.com",
   "features": ["SecurityEventEnabled"],
   "settings": {
     "pathAssistantSettings": {
