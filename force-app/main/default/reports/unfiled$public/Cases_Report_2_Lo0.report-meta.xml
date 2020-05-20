@@ -13,9 +13,6 @@
         <field>CONTACT.EMAIL</field>
     </columns>
     <columns>
-        <field>Case.SSN__c</field>
-    </columns>
-    <columns>
         <field>OPEN</field>
     </columns>
     <columns>
@@ -31,7 +28,7 @@
         <field>PRIORITY</field>
     </columns>
     <format>Tabular</format>
-    <name>Cases Report</name>
+    <name>Cases Report 2</name>
     <params>
         <name>units</name>
         <value>h</value>
