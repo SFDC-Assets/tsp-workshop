@@ -1,20 +1,8 @@
-# Create the demo org
-sfdx shane:org:create -f config/project-scratch-def.json -d 1 -s --wait 60 --userprefix admin -o transaction.workshop
+sf demoutil org create scratch -f config/project-scratch-def.json -d 5 -s -w60 -p admin -e transaction.workshop
+sfdx shane tsp username update
+sf project deploy start
+sf org assign permset -n TransactionSecurity
+sf demoutil user password set -p salesforce1 -g User -l User
+sf automig load --inputdir ./data
+sf org open
 
-# Updates the Transaction Security Policies to contain this scratch orgs username
-# sfdx shane:tsp:username:update
-
-# Push the metadata into the new scratch org.
-sfdx force:source:push
-
-# Assign user the permset
-sfdx force:user:permset:assign -n TransactionSecurity
-
-# Set the default password.
-# sfdx shane:user:password:set -g User -l User -p salesforce1
-
-# Open the org.
-sfdx force:org:open
-
-# Import the data required by the demo
-sfdx automig:load --inputdir ./data
